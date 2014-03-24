@@ -11,26 +11,26 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno225
 
+# Flags
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE
+
 # Architecture
-TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
-TARGET_CPU_VARIANT := krait
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a9
 ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=valentewxc9
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
-
 TARGET_PREBUILT_KERNEL := device/htc/valentewxc9/kernel
-TARGET_KERNEL_CONFIG := valente_wx_c9_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/valentewxc9
+#TARGET_KERNEL_CONFIG := valente_wx_c9_defconfig
+#TARGET_KERNEL_SOURCE := kernel/htc/valentewxc9
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -44,11 +44,14 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Vold
-BOARD_VOLD_MAX_PARTITIONS := 39
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Charge mode
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+# Use this flag if the board has a ext4 partition larger than 2gb
+BOARD_HAS_LARGE_FILESYSTEM := true
+
+# Recovery: set depending on recovery being built for. (CWM or TWRP)
+#           both init scripts can be found in the recovery folder
+TARGET_RECOVERY_INITRC := device/htc/valentewxc9//recovery/init-twrp.rc
 
 # TWRP
 DEVICE_RESOLUTION := 540x960
