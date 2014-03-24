@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
-# inherit from common msm8960
--include device/htc/valentewxc9/BoardConfigCommon.mk
+# inherit from the proprietary version
+-include vendor/htc/valentewxc9/BoardConfigVendor.mk
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := valentewxc9
@@ -26,11 +26,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=valentewxc9
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=valentewxc9 user_debug=31
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 TARGET_PREBUILT_KERNEL := device/htc/valentewxc9/kernel
-#TARGET_KERNEL_CONFIG := valente_wx_c9_defconfig
-#TARGET_KERNEL_SOURCE := kernel/htc/valentewxc9
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -68,4 +66,5 @@ TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_HTC_LED := true
+
 

@@ -1,3 +1,6 @@
+## Specify phone tech before including full_phone
+$(call inherit-product, vendor/cm/config/gsm.mk)
+
 # Release name
 PRODUCT_RELEASE_NAME := valentewxc9
 
@@ -17,6 +20,3 @@ PRODUCT_NAME := cm_valentewxc9
 PRODUCT_BRAND := htc_asia_tw
 PRODUCT_MODEL := VAE_WX_C9
 PRODUCT_MANUFACTURER := HTC
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=valentewxc9
