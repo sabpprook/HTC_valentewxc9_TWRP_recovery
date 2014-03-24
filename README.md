@@ -1,6 +1,6 @@
 編譯說明
 ==========================
-1.  下載 CM9 代碼 
+1.  下載 CM9 代碼   
   $ repo init -u git://github.com/CyanogenMod/android.git -b ics  
   $ repo sync
 
