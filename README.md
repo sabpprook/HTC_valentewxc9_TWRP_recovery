@@ -16,6 +16,6 @@
   source: https://github.com/TeamWin/Team-Win-Recovery-Project/
 
 5.  開始編譯  
-  $ . ./build/envsetup.sh 
+  $ . ./build/envsetup.sh   
   $ lunch cm_valentewxc9-eng  
   $ make -j4 recoveryimage
