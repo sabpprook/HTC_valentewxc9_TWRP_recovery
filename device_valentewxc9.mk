@@ -19,9 +19,12 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_valentewxc9
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=1370502677
+PRODUCT_NAME := valentewxc9
 PRODUCT_DEVICE := valentewxc9
+PRODUCT_BRAND := htc_asia_tw
+PRODUCT_MODEL := VAE_WX_C9
+PRODUCT_MANUFACTURER := HTC
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \

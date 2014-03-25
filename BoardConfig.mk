@@ -4,7 +4,7 @@ USE_CAMERA_STUB := true
 -include vendor/htc/valentewxc9/BoardConfigVendor.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := valentewxc9
+TARGET_BOOTLOADER_BOARD_NAME := 
 TARGET_NO_BOOTLOADER := true
 
 # Platform
