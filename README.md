@@ -4,7 +4,7 @@
   $ repo init -u git://github.com/CyanogenMod/android.git -b ics  
   $ repo sync
 
-3.  下載 valentewxc9_TWRP_recovery  
+3.  下載 HTC_valentewxc9_TWRP_recovery  
   $ git clone https://github.com/sabpprook/HTC_valentewxc9_TWRP_recovery.git  
   $ mv HTC_valentewxc9_TWRP_recovery device/htc/valentewxc9
 
@@ -13,5 +13,5 @@
 
 5.  開始編譯  
   $ . ./build/envsetup.sh   
-  $ lunch cm_valentewxc9-eng  
-  $ mka recoveryimage
+  $ lunch valentewxc9-eng  
+  $ make clean && make -j4 recoveryimage
