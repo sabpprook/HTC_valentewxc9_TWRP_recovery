@@ -27,7 +27,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=valentewxc9 user_debug=31
-BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
+BOARD_FORCE_RAMDISK_ADDRESS := --ramdisk_offset 0x01408000
 TARGET_PREBUILT_KERNEL := device/htc/valentewxc9/kernel
 
 # Filesystem
