@@ -1,7 +1,7 @@
 編譯說明
 ==========================
 1.  下載 CM9 代碼   
-  $ repo init -u git://github.com/CyanogenMod/android.git -b ics  
+  $ repo init -u git://github.com/CyanogenMod/android.git -b jellybean  
   $ repo sync
 
 3.  下載 HTC_valentewxc9_TWRP_recovery  
