@@ -4,17 +4,12 @@ USE_CAMERA_STUB := true
 -include vendor/htc/valentewxc9/BoardConfigVendor.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := 
+TARGET_BOOTLOADER_BOARD_NAME := valentewxc9
 TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno225
-
-# Flags
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE
 
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
@@ -26,7 +21,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=valentewxc9 user_debug=31
+BOARD_KERNEL_CMDLINE := 
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 TARGET_PREBUILT_KERNEL := device/htc/valentewxc9/kernel
 
@@ -65,6 +60,4 @@ TW_INCLUDE_DUMLOCK := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_HTC_LED := true
-
 
