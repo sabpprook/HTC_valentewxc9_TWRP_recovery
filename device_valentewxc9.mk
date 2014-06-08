@@ -26,9 +26,8 @@ PRODUCT_BRAND := htc_asia_tw
 PRODUCT_MODEL := VAE_WX_C9
 PRODUCT_MANUFACTURER := HTC
 
-# Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/recovery.fstab:recovery/root/etc/recovery.fstab \
     $(LOCAL_PATH)/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
     $(LOCAL_PATH)/recovery/sbin/power_test:recovery/root/sbin/power_test \
     $(LOCAL_PATH)/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \

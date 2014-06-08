@@ -1,2 +1,2 @@
-add_lunch_combo htc_valentewxc9-userdebug
-add_lunch_combo htc_valentewxc9-eng
+add_lunch_combo cm_valentewxc9-userdebug
+add_lunch_combo cm_valentewxc9-eng

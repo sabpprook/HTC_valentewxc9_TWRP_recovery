@@ -33,18 +33,12 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x47fffc00
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x89fffe00
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Use power button as select in recovery
+TARGET_PREBUILT_KERNEL := device/htc/valentewxc9/kernel
+
 BOARD_HAS_NO_SELECT_BUTTON := true
-
-# Vold
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
-# Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
-
-# Recovery: set depending on recovery being built for. (CWM or TWRP)
-#           both init scripts can be found in the recovery folder
-TARGET_RECOVERY_INITRC := device/htc/valentewxc9/recovery/init-twrp.rc
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+TARGET_RECOVERY_INITRC := device/htc/valentewxc9/recovery/init.rc
 
 # TWRP
 DEVICE_RESOLUTION := 540x960
@@ -60,4 +54,5 @@ TW_INCLUDE_DUMLOCK := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_BLANK := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+
 
