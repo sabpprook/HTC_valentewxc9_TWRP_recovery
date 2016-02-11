@@ -1,2 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_valentewxc9.mk
+    $(LOCAL_DIR)/device.mk \
+    $(LOCAL_DIR)/omni_valentewxc9.mk
